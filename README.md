@@ -20,7 +20,9 @@ Edit or add time strings in main.js
 
 ### Testing
 
-No unit testing setup yet.
+```sh
+npm run test
+```
 
 
 
