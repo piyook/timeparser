@@ -46,7 +46,7 @@ class TimeWarp {
         break;
       case "mon":
         this.date.setDate(1);
-        this.date.setHours(1);
+        this.date.setHours(0);
         this.date.setMinutes(0);
         this.date.setSeconds(0);
         this.date.setMilliseconds(0);
