@@ -8,7 +8,7 @@ export function parse(expression) {
     return newTime.warp().snap().date;
 
   } catch (error) {
-    return `${error} : ${expression}`;
+    return `${error.message} : ${expression}`;
   }
 };
 
@@ -92,7 +92,7 @@ const parseExpression = (expression) => {
 
   // if expression modifier is not on allowed list then return error message
   if (!allowedModifiers.includes(components[0])) {
-    throw "ERROR: Invalid Expression. Incorrect Modifier";
+    throw new Error("ERROR: Invalid Expression. Incorrect Modifier");
   }
 
   /* loop through operations, processing and modifying parsedExpression Object*/
@@ -103,7 +103,7 @@ const parseExpression = (expression) => {
 
     // if time unit is not on allowed list then return error message
     if (!allowedTimeUnits.includes(timeUnit)) {
-      throw "ERROR: Invalid Expression. Incorrect Time Unit";
+      throw new Error("ERROR: Invalid Expression. Incorrect Time Unit");
     }
 
     // extract amount of time
